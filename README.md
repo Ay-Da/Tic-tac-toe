@@ -1,6 +1,6 @@
 <h1> A&M Tic-Tac-Toe </h1>
 
-... Coded By Aymen Daboussi
+This is a sample application based on the Tic-Tac-Toe game , its Private Version specified to play it with my fiancee .
 
 <h1> Link : </h1>
 

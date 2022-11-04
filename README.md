@@ -7,7 +7,7 @@ This is a sample application based on the Tic-Tac-Toe game , its Private Version
 <li> Online <a href="https://ay-da.github.io/tic-tac-toe"> A&M Tic-Tac-Toe </a> App </li>
 <h1>Screenshots </h1>
 
-<img src="https://i.ibb.co/zrzqQ43/Winner.jpg" >
+<img src="https://i.ibb.co/mCkm1cy/Winner.jpg" >
 
 <h1> Tested On :</h1>
 

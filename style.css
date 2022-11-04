@@ -1,0 +1,189 @@
+:root {
+  --main-bg-color: whitesmoke;
+}
+
+body {
+  margin: 0;
+background-color: #005945;
+  color: var(--main-bg-color);
+}
+
+h1,
+h2 {
+  font-family: "Papyrus", Times, serif;
+  text-align: center;
+  max-width: 85%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+hr {
+  height: 1.2px;
+  width: 40%;
+  background-color: var(--main-bg-color);
+  border-color: var(--main-bg-color);
+  margin-top: -10px;
+  margin-bottom: 70px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#board {
+  width: 420px;
+  height: 420px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32%;
+  height: 33%;
+  border: 1px solid var(--main-bg-color);
+}
+
+/* remove border for board edges */
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: none;
+}
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+  border-left: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+  border-right: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+  border-bottom: none;
+}
+
+#restart-button {
+  background-color: var(--main-bg-color);
+  color: rgb(140, 31, 140);
+  padding: 10px 20px;
+  border-radius: 0.3em;
+  border-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+#restart-button:hover {
+  transform: scale(1.1);
+}
+
+/* Mariam square - set */
+.square.Mariam::before {
+  content: url(mariam.png);
+  font-size: 13rem;
+}
+
+/* Mariam square - hover */
+#board.Mariam .square:not(.Mariam):not(.Aymen):not(.end-game):hover::before {
+  content: url(mariam.png);
+  font-size: 13rem;
+  opacity: 50%;
+}
+
+/* Aymen square - set */
+.square.Aymen::before {
+  content: url(aymen.png);
+  margin-bottom: -3px;
+}
+
+/* Aymen square - hover */
+#board.Aymen .square:not(.Mariam):not(.Aymen):not(.end-game):hover::before {
+  content: url(aymen.png); 
+  margin-bottom: -3px;
+}
+
+.hidden {
+  display: none;
+}
+
+.winner-squares {
+  background-color: goldenrod;
+}
+
+/* For small devices */
+@media only screen and (max-width: 600px) {
+  #board {
+    width: 235px;
+    height: 235px;
+    max-width: 85%;
+    max-height: 85%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  hr {
+	  
+	  width: 76%;
+  }
+
+  /* Mariam square - set */
+  .square.Mariam::before {
+    font-size: 0rem !important;
+    content: url(mariam600px.png);
+  }
+
+  /* Mariam square - hover */
+  #board.Mariam
+    .square:not(.Mariam):not(.Aymen):not(.end-game):hover::before {
+    font-size: 0rem !important;
+    content: url(mariam600px.png);
+  }
+
+  /* Aymen square - set */
+  .square.Aymen::before {
+   content: url(aymen600px.png);
+   margin-bottom: -7px;
+  }
+
+  /* Aymen square - hover */
+  #board.Aymen
+    .square:not(.Mariam):not(.Aymen):not(.end-game):hover::before {
+    content: url(aymen600px.png);
+    margin-bottom: -7px;
+  }
+}
+
+footer {
+
+  background-color: white;
+  color: black;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 60px; 
+  bottom: 0;
+  font-family: "Papyrus", Times, serif;
+}
+
